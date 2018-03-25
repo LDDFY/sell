@@ -6,6 +6,7 @@ create table product_info(
 	product_stock int not null comment '库存',
 	product_description varchar(64) comment '描述',
 	product_icon  varchar(512) comment '图片链接',
+	product_status tinyint(3) default '0' comment '商品上下架',
 	categroy_type int not null comment '商品类目',
 	create_time  timestamp not null default current_timestamp comment '创建时间',
 	update_time  timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
