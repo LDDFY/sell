@@ -1,6 +1,7 @@
 package com.sell.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,6 +17,7 @@ import java.util.Date;
  */
 @Data
 @Entity
+@DynamicUpdate
 @Table(name = "product_info")
 public class ProductInfo implements Serializable {
 
