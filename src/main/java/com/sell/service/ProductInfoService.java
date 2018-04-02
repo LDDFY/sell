@@ -1,5 +1,6 @@
 package com.sell.service;
 
+import com.sell.dto.CarDTO;
 import com.sell.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -50,7 +51,16 @@ public interface ProductInfoService {
      */
     public void deleteById(String id) throws Exception;
 
-    //加库存
 
-    //减库存
+    /**
+     * 加库存
+     */
+    public void increaseStock(List<CarDTO> carDTOList) throws Exception;
+
+    /**
+     * 减库存
+     *
+     * @param carDTOList
+     */
+    public void decreaseStock(List<CarDTO> carDTOList) throws Exception;
 }
