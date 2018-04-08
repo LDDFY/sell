@@ -6,6 +6,9 @@ spring:
     url: jdbc:mysql://192.168.199.128:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+#JSON 序列化是否忽略null数据
+  jackson:
+    default-property-inclusion: non_null
 
 server:
   port: 8080

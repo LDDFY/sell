@@ -71,6 +71,7 @@ public class OrderServiceImpl implements OrderService {
         //写入订单数据库
         OrderMaster master = new OrderMaster();
         BeanUtils.copyProperties(orderDTO, master);
+        orderDTO.setOrderId(orderId);
         master.setOrderId(orderId);
         master.setOrderAmount(orderAmount);
         master.setOrderStatus(OrderStatusEnum.NEW.getCode());
@@ -178,7 +179,7 @@ public class OrderServiceImpl implements OrderService {
             log.error("[订单不是待支付状态]");
             throw new SellException(ResultEnum.ORDER_STATE_ERROR);
         }
-        
+
         orderDTO.setPayStatus(PayStatusEnum.SUCCESS.getCode());
         OrderMaster orderMaster = new OrderMaster();
         BeanUtils.copyProperties(orderDTO, orderMaster);

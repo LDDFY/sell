@@ -1,9 +1,6 @@
 package com.sell.util;
 
-import com.sell.vo.ProductVO;
 import com.sell.vo.ResultVO;
-
-import java.util.List;
 
 /**
  * 返回查询结果
@@ -12,7 +9,7 @@ import java.util.List;
  */
 public class ResultVoUtil {
 
-    public static ResultVO success(List<ProductVO> productVOList) {
+    public static ResultVO success(Object productVOList) {
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(0);
         resultVO.setMsg("success");

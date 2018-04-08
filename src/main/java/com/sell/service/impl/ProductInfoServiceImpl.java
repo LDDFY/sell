@@ -30,7 +30,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     @Override
     public ProductInfo findOne(String id) {
         Assert.assertNotNull("id", id);
-        return productInfoRepository.findById(id).get();
+        return productInfoRepository.getOne(id);
     }
 
     @Override
